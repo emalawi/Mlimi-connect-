@@ -16,8 +16,6 @@
             --border: #2a2a2a;
             --text:   #e0e0e0;
             --muted:  #888;
-            --user-bubble: #2e7d32;
-            --ai-bubble:   #1e1e1e;
         }
 
         body {
@@ -40,77 +38,23 @@
             text-align: center;
             background: linear-gradient(160deg, #0a1f0a 0%, #121212 100%);
         }
-
-        .lang-logo {
-            font-size: 3.5rem;
-            margin-bottom: 10px;
-        }
-
-        .lang-title {
-            font-size: 2rem;
-            font-weight: 800;
-            color: var(--gold);
-            margin-bottom: 6px;
-            letter-spacing: 0.02em;
-        }
-
-        .lang-subtitle {
-            font-size: 0.9rem;
-            color: var(--muted);
-            margin-bottom: 40px;
-            line-height: 1.5;
-        }
-
-        .lang-prompt {
-            font-size: 1rem;
-            color: var(--text);
-            margin-bottom: 20px;
-            font-weight: 600;
-        }
-
-        .lang-buttons {
-            display: flex;
-            gap: 16px;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
+        .lang-logo       { font-size: 3.5rem; margin-bottom: 10px; }
+        .lang-title      { font-size: 2rem; font-weight: 800; color: var(--gold); margin-bottom: 6px; }
+        .lang-subtitle   { font-size: 0.88rem; color: var(--muted); margin-bottom: 40px; line-height: 1.6; }
+        .lang-prompt     { font-size: 1rem; color: var(--text); margin-bottom: 20px; font-weight: 600; }
+        .lang-buttons    { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; }
         .lang-btn {
-            padding: 18px 40px;
-            border-radius: 12px;
-            border: 2px solid var(--green);
-            font-size: 1.05rem;
-            font-weight: 700;
-            cursor: pointer;
-            transition: all 0.2s;
-            font-family: inherit;
-            min-width: 160px;
+            padding: 18px 40px; border-radius: 12px; border: 2px solid var(--green);
+            font-size: 1.05rem; font-weight: 700; cursor: pointer;
+            transition: all 0.2s; font-family: inherit; min-width: 160px;
         }
-
-        .lang-btn.english {
-            background: var(--green);
-            color: #fff;
-        }
-
-        .lang-btn.chichewa {
-            background: transparent;
-            color: var(--green2);
-            border-color: var(--green2);
-        }
-
-        .lang-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(46,125,50,0.35);
-        }
-
+        .lang-btn.english  { background: var(--green); color: #fff; }
+        .lang-btn.chichewa { background: transparent; color: #66bb6a; border-color: #66bb6a; }
+        .lang-btn:hover    { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(46,125,50,0.35); }
         .lang-free-badge {
-            margin-top: 40px;
-            font-size: 0.78rem;
-            color: var(--muted);
-            border: 1px solid var(--border);
-            border-radius: 20px;
-            padding: 6px 16px;
-            display: inline-block;
+            margin-top: 40px; font-size: 0.78rem; color: var(--muted);
+            border: 1px solid var(--border); border-radius: 20px;
+            padding: 6px 16px; display: inline-block;
         }
 
         /* ── MAIN APP ── */
@@ -118,152 +62,101 @@
 
         /* Header */
         .app-header {
-            background: #0d1f0d;
-            border-bottom: 1px solid var(--border);
-            padding: 12px 16px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            flex-shrink: 0;
+            background: #0d1f0d; border-bottom: 1px solid var(--border);
+            padding: 12px 16px; display: flex; align-items: center;
+            gap: 10px; flex-shrink: 0;
         }
-
         .app-logo { font-size: 1.4rem; }
-
         .app-header-text { flex-grow: 1; }
-        .app-header-text h1 { font-size: 1rem; font-weight: 800; color: var(--gold); }
+        .app-header-text h1    { font-size: 1rem; font-weight: 800; color: var(--gold); }
         .app-header-text small { font-size: 0.7rem; color: var(--muted); }
-
         .lang-toggle {
-            background: var(--border);
-            border: 1px solid #444;
-            color: var(--text);
-            font-family: inherit;
-            font-size: 0.72rem;
-            padding: 5px 10px;
-            border-radius: 20px;
-            cursor: pointer;
+            background: var(--border); border: 1px solid #444; color: var(--text);
+            font-family: inherit; font-size: 0.72rem; padding: 5px 10px;
+            border-radius: 20px; cursor: pointer; white-space: nowrap;
         }
         .lang-toggle:hover { background: #333; }
 
         /* Topic chips */
         .topic-bar {
-            background: #161616;
-            border-bottom: 1px solid var(--border);
-            padding: 8px 16px;
-            display: flex;
-            gap: 8px;
-            overflow-x: auto;
-            flex-shrink: 0;
+            background: #161616; border-bottom: 1px solid var(--border);
+            padding: 8px 16px; display: flex; gap: 8px;
+            overflow-x: auto; flex-shrink: 0;
         }
         .topic-bar::-webkit-scrollbar { display: none; }
-
         .chip {
-            background: var(--card);
-            border: 1px solid var(--border);
-            color: var(--text);
-            font-family: inherit;
-            font-size: 0.75rem;
-            padding: 5px 12px;
-            border-radius: 20px;
-            cursor: pointer;
-            white-space: nowrap;
-            transition: all 0.15s;
+            background: var(--card); border: 1px solid var(--border); color: var(--text);
+            font-family: inherit; font-size: 0.75rem; padding: 5px 12px;
+            border-radius: 20px; cursor: pointer; white-space: nowrap; transition: all 0.15s;
         }
         .chip:hover { border-color: var(--green); color: #81c784; }
 
         /* Chat */
         .chat-box {
-            flex-grow: 1;
-            overflow-y: auto;
-            padding: 16px;
-            display: flex;
-            flex-direction: column;
-            gap: 14px;
+            flex-grow: 1; overflow-y: auto; padding: 16px;
+            display: flex; flex-direction: column; gap: 14px;
         }
         .chat-box::-webkit-scrollbar { width: 4px; }
         .chat-box::-webkit-scrollbar-thumb { background: #333; border-radius: 4px; }
 
         /* Welcome card */
         .welcome-card {
-            background: var(--card);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 18px;
-            border-left: 4px solid var(--green);
+            background: var(--card); border: 1px solid var(--border);
+            border-radius: 12px; padding: 18px; border-left: 4px solid var(--green);
         }
-        .welcome-card h3 { color: var(--gold); font-size: 0.95rem; margin-bottom: 8px; }
-        .welcome-card p  { font-size: 0.82rem; color: var(--muted); line-height: 1.6; }
-        .welcome-card ul { margin: 10px 0 0 16px; font-size: 0.8rem; color: #aaa; line-height: 1.8; }
+        .welcome-card h3  { color: var(--gold); font-size: 0.95rem; margin-bottom: 8px; }
+        .welcome-card p   { font-size: 0.82rem; color: var(--muted); line-height: 1.6; margin-bottom: 10px; }
+        .welcome-card ul  { margin-left: 16px; font-size: 0.8rem; color: #aaa; line-height: 1.9; }
 
         /* Messages */
-        .message { display: flex; flex-direction: column; animation: fadeUp 0.2s ease; }
+        .message { display: flex; flex-direction: column; animation: fadeUp 0.22s ease; }
         @keyframes fadeUp {
             from { opacity: 0; transform: translateY(6px); }
             to   { opacity: 1; transform: translateY(0); }
         }
+        .msg-label { font-size: 0.67rem; color: var(--muted); margin-bottom: 3px; }
+        .msg-label.right { text-align: right; }
 
-        .user-msg { align-items: flex-end; }
+        .user-msg   { align-items: flex-end; }
         .user-bubble {
-            background: var(--user-bubble);
-            color: #fff;
+            background: var(--green); color: #fff;
             border-radius: 16px 16px 4px 16px;
-            padding: 10px 14px;
-            max-width: 78%;
-            font-size: 0.87rem;
-            line-height: 1.5;
-            word-break: break-word;
+            padding: 10px 14px; max-width: 78%;
+            font-size: 0.87rem; line-height: 1.5; word-break: break-word;
         }
 
         .ai-msg { align-items: flex-start; }
         .ai-bubble {
-            background: var(--ai-bubble);
-            border: 1px solid var(--border);
+            background: var(--card); border: 1px solid var(--border);
             border-left: 3px solid var(--green);
             border-radius: 4px 16px 16px 16px;
-            padding: 12px 14px;
-            max-width: 88%;
-            font-size: 0.87rem;
-            line-height: 1.7;
-            color: var(--text);
-            white-space: pre-wrap;
-            word-break: break-word;
+            padding: 12px 14px; max-width: 92%;
+            font-size: 0.87rem; line-height: 1.75;
+            color: var(--text); white-space: pre-wrap; word-break: break-word;
         }
-
         .ai-meta {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            margin-top: 5px;
-            padding-left: 2px;
+            display: flex; align-items: center; gap: 8px;
+            margin-top: 5px; padding-left: 2px;
         }
         .ai-time { font-size: 0.67rem; color: var(--muted); }
-
         .copy-btn {
-            background: none;
-            border: 1px solid var(--border);
-            color: var(--muted);
-            font-family: inherit;
-            font-size: 0.67rem;
-            padding: 2px 8px;
-            border-radius: 20px;
-            cursor: pointer;
+            background: none; border: 1px solid var(--border); color: var(--muted);
+            font-family: inherit; font-size: 0.67rem; padding: 2px 8px;
+            border-radius: 20px; cursor: pointer; transition: all 0.15s;
         }
-        .copy-btn:hover { color: var(--green2); border-color: var(--green2); }
+        .copy-btn:hover  { color: #66bb6a; border-color: #66bb6a; }
         .copy-btn.copied { color: var(--green); border-color: var(--green); }
 
         /* Thinking */
         .thinking-bubble {
-            background: var(--card);
-            border: 1px solid var(--border);
+            background: var(--card); border: 1px solid var(--border);
             border-left: 3px solid var(--green);
             border-radius: 4px 16px 16px 16px;
-            padding: 14px 18px;
-            display: flex; align-items: center; gap: 6px;
+            padding: 14px 18px; display: flex; align-items: center; gap: 6px;
         }
         .dot {
             width: 7px; height: 7px; border-radius: 50%;
-            background: var(--green2);
-            animation: bounce 1.2s infinite;
+            background: #66bb6a; animation: bounce 1.2s infinite;
         }
         .dot:nth-child(2) { animation-delay: 0.2s; }
         .dot:nth-child(3) { animation-delay: 0.4s; }
@@ -271,6 +164,7 @@
             0%,80%,100% { transform: translateY(0); opacity: 0.4; }
             40%          { transform: translateY(-5px); opacity: 1; }
         }
+        .think-label { font-size: 0.78rem; color: var(--muted); margin-left: 4px; }
 
         .typing-cursor::after {
             content: '▋'; color: var(--green);
@@ -278,84 +172,61 @@
         }
         @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
 
-        /* Translating badge */
-        .translating {
-            font-size: 0.72rem; color: var(--gold);
-            display: flex; align-items: center; gap: 5px;
+        /* Translating */
+        .translating-badge {
+            font-size: 0.75rem; color: var(--gold);
+            display: flex; align-items: center; gap: 5px; padding: 10px 14px;
+            background: var(--card); border: 1px solid var(--border);
+            border-left: 3px solid var(--gold);
+            border-radius: 4px 16px 16px 16px; max-width: 92%;
         }
-        .spin {
-            display: inline-block;
-            animation: spin 1s linear infinite;
-        }
+        .spin { display: inline-block; animation: spin 1s linear infinite; }
         @keyframes spin { to { transform: rotate(360deg); } }
 
         /* Error */
         .error-bubble {
-            background: #1a0a0a;
-            border: 1px solid #5c1a1a;
-            border-radius: 8px;
-            padding: 10px 14px;
-            font-size: 0.82rem;
-            color: #ff8a80;
-            max-width: 88%;
+            background: #1a0a0a; border: 1px solid #5c1a1a; border-radius: 10px;
+            padding: 10px 14px; font-size: 0.82rem; color: #ff8a80; max-width: 92%;
         }
 
         /* Input */
         .input-area {
-            background: #161616;
-            border-top: 1px solid var(--border);
-            padding: 12px 16px;
-            display: flex;
-            gap: 10px;
-            align-items: flex-end;
-            flex-shrink: 0;
+            background: #161616; border-top: 1px solid var(--border);
+            padding: 12px 16px; display: flex; gap: 10px;
+            align-items: flex-end; flex-shrink: 0;
         }
-
+        .input-wrap { flex-grow: 1; }
         #promptInput {
-            flex-grow: 1;
-            background: var(--card);
-            border: 1px solid var(--border);
-            border-radius: 10px;
-            padding: 10px 14px;
-            font-family: inherit;
-            font-size: 0.87rem;
-            color: var(--text);
-            outline: none;
-            resize: none;
-            max-height: 100px;
-            line-height: 1.5;
+            width: 100%; background: var(--card); border: 1px solid var(--border);
+            border-radius: 10px; padding: 10px 14px; font-family: inherit;
+            font-size: 0.87rem; color: var(--text); outline: none;
+            resize: none; max-height: 100px; line-height: 1.5;
             transition: border-color 0.15s;
         }
-        #promptInput:focus { border-color: var(--green); }
+        #promptInput:focus      { border-color: var(--green); }
         #promptInput::placeholder { color: var(--muted); }
+        .char-count { font-size: 0.65rem; color: var(--muted); text-align: right; margin-top: 3px; }
 
         .send-btn {
-            width: 42px; height: 42px;
-            border-radius: 50%;
-            background: var(--green);
-            border: none;
-            color: #fff;
-            font-size: 1.1rem;
-            cursor: pointer;
+            width: 44px; height: 44px; border-radius: 50%;
+            background: var(--green); border: none; color: #fff;
+            font-size: 1.1rem; cursor: pointer; flex-shrink: 0;
             display: flex; align-items: center; justify-content: center;
             transition: opacity 0.15s, transform 0.1s;
-            flex-shrink: 0;
         }
         .send-btn:hover   { opacity: 0.85; }
         .send-btn:active  { transform: scale(0.95); }
         .send-btn:disabled { opacity: 0.35; cursor: not-allowed; }
 
-        .char-count { font-size: 0.65rem; color: var(--muted); text-align: right; margin-top: 3px; }
-
         @media (max-width: 480px) {
-            .ai-bubble, .error-bubble { max-width: 96%; }
-            .user-bubble { max-width: 86%; }
+            .ai-bubble, .error-bubble { max-width: 98%; }
+            .user-bubble { max-width: 88%; }
         }
     </style>
 </head>
 <body>
 
-<!-- ── SCREEN 1: LANGUAGE SELECTION ── -->
+<!-- ── LANGUAGE SELECTION SCREEN ── -->
 <div id="langScreen">
     <div class="lang-logo">🌱</div>
     <div class="lang-title">Mlimi Connect</div>
@@ -365,17 +236,13 @@
     </div>
     <div class="lang-prompt">Choose your language / Sankhani chilankhulo chanu:</div>
     <div class="lang-buttons">
-        <button class="lang-btn english" onclick="selectLanguage('english')">
-            🇬🇧 English
-        </button>
-        <button class="lang-btn chichewa" onclick="selectLanguage('chichewa')">
-            🇲🇼 Chichewa
-        </button>
+        <button class="lang-btn english"  onclick="selectLanguage('english')">🇬🇧 English</button>
+        <button class="lang-btn chichewa" onclick="selectLanguage('chichewa')">🇲🇼 Chichewa</button>
     </div>
     <div class="lang-free-badge">✅ 100% Free Forever · Ulere Nthawi Yonse</div>
 </div>
 
-<!-- ── SCREEN 2: MAIN APP ── -->
+<!-- ── MAIN APP SCREEN ── -->
 <div id="appScreen">
 
     <div class="app-header">
@@ -384,7 +251,7 @@
             <h1>Mlimi Connect</h1>
             <small id="headerSub">Free Agricultural AI · Malawi</small>
         </div>
-        <button class="lang-toggle" onclick="switchLanguage()" id="langToggleBtn">🇲🇼 Chichewa</button>
+        <button class="lang-toggle" id="langToggleBtn" onclick="switchLanguage()">🇲🇼 Chichewa</button>
     </div>
 
     <div class="topic-bar" id="topicBar"></div>
@@ -403,27 +270,26 @@
     </div>
 
     <div class="input-area">
-        <div style="flex-grow:1">
+        <div class="input-wrap">
             <textarea id="promptInput" rows="1"
                 placeholder="Ask about crops, livestock, pests, diseases..."
                 oninput="autoResize(this); updateCharCount(this)"
                 onkeypress="handleKey(event)"></textarea>
             <div class="char-count" id="charCount">0 / 300</div>
         </div>
-        <button class="send-btn" id="sendBtn" onclick="sendMessage()" title="Send">➤</button>
+        <button class="send-btn" id="sendBtn" onclick="sendMessage()">➤</button>
     </div>
 
 </div>
 
 <script>
 // ── CONFIG ────────────────────────────────────────────────────────────────────
-const AI_API      = "https://emalawi19-js-coder-backend.hf.space/generate";
-const TRANS_API   = "https://emalawi19-english-chichewa-translator.hf.space/translate";
-const MAX_CHARS   = 300;
+const AI_API    = "https://emalawi19-js-coder-backend.hf.space/generate";
+const TRANS_API = "https://emalawi19-english-chichewa-translator.hf.space/translate";
+const MAX_CHARS = 300;
+let currentLang = 'english';
 
-let currentLang   = 'english';
-
-// ── UI TEXT (English / Chichewa) ──────────────────────────────────────────────
+// ── UI TEXT ───────────────────────────────────────────────────────────────────
 const UI = {
     english: {
         headerSub:   "Free Agricultural AI · Malawi",
@@ -431,8 +297,13 @@ const UI = {
         placeholder: "Ask about crops, livestock, pests, diseases...",
         wcTitle:     "👋 Welcome to Mlimi Connect",
         wcDesc:      "Ask me anything about farming in Malawi. I know about crops, pests, diseases, soil, and livestock specific to Malawi's conditions.",
-        wcList:      ["🌽 How do I control fall armyworm in maize?","🐔 What diseases affect village chickens?","🥜 When should I plant groundnuts in Lilongwe?","🌿 How do I prepare land for tobacco?"],
-        topics:      ["🌽 Maize","🥜 Groundnuts","🍅 Tomatoes","🐔 Chickens","🐄 Cattle","🌿 Tobacco","🍌 Bananas","🐖 Pigs","☀️ Sunflower","🫘 Soya Beans"],
+        wcList:      [
+            "🌽 How do I control fall armyworm in maize?",
+            "🐔 What diseases affect village chickens?",
+            "🥜 When should I plant groundnuts in Lilongwe?",
+            "🌿 How do I prepare land for tobacco?"
+        ],
+        topics:      ["🌽 Maize","🥜 Groundnuts","🍅 Tomatoes","🐔 Chickens","🐄 Cattle","🌿 Tobacco","🍌 Bananas","🐖 Pigs","☀️ Sunflower","🫘 Soya Beans","🐟 Fish Farming","🍯 Beekeeping"],
         youLabel:    "You",
         aiLabel:     "Mlimi AI",
         translating: "Translating...",
@@ -440,7 +311,6 @@ const UI = {
         errConn:     "Connection failed. Please try again.",
         copy:        "Copy",
         copied:      "Copied!",
-        timeLabel:   "s",
     },
     chichewa: {
         headerSub:   "AI ya Ulimi Waulere · Malawi",
@@ -448,8 +318,13 @@ const UI = {
         placeholder: "Funsani za mbewu, ziweto, matenda...",
         wcTitle:     "👋 Mwakufikira Mlimi Connect",
         wcDesc:      "Ndikudziwa zambiri za ulimi wa Malawi. Ndikuthandizani ndi mbewu, matenda, nkhawa, ndi ziweto.",
-        wcList:      ["🌽 Ndichite bwanji kuzuza njowala pa chimanga?","🐔 Nkhuku zidwala matenda ati?","🥜 Ndizitseke ndagala liti ku Lilongwe?","🌿 Ndikalize munda wotchova bwanji?"],
-        topics:      ["🌽 Chimanga","🥜 Ndagala","🍅 Matimati","🐔 Nkhuku","🐄 Ng'ombe","🌿 Fodya","🍌 Nthochi","🐖 Nkhumba","☀️ Sanfalawo","🫘 Soya"],
+        wcList:      [
+            "🌽 Ndichite bwanji kuzuza njowala pa chimanga?",
+            "🐔 Nkhuku zidwala matenda ati?",
+            "🥜 Ndizitseke ndagala liti ku Lilongwe?",
+            "🌿 Ndikalize munda wotchova bwanji?"
+        ],
+        topics:      ["🌽 Chimanga","🥜 Ndagala","🍅 Matimati","🐔 Nkhuku","🐄 Ng'ombe","🌿 Fodya","🍌 Nthochi","🐖 Nkhumba","☀️ Sanfalawo","🫘 Soya","🐟 Nsomba","🍯 Uchi"],
         youLabel:    "Inu",
         aiLabel:     "Mlimi AI",
         translating: "Kumasulira...",
@@ -457,11 +332,10 @@ const UI = {
         errConn:     "Kulumikizana kwathera. Yesaninso.",
         copy:        "Kopira",
         copied:      "Wakopidwa!",
-        timeLabel:   "s",
     }
 };
 
-// ── LANGUAGE SELECTION ────────────────────────────────────────────────────────
+// ── LANGUAGE ──────────────────────────────────────────────────────────────────
 function selectLanguage(lang) {
     currentLang = lang;
     document.getElementById('langScreen').style.display = 'none';
@@ -476,53 +350,55 @@ function switchLanguage() {
 
 function applyUILanguage() {
     const t = UI[currentLang];
-    document.getElementById('headerSub').textContent      = t.headerSub;
-    document.getElementById('langToggleBtn').textContent  = t.toggleBtn;
-    document.getElementById('promptInput').placeholder    = t.placeholder;
-    document.getElementById('wcTitle').textContent        = t.wcTitle;
-    document.getElementById('wcDesc').textContent         = t.wcDesc;
-    const list = document.getElementById('wcList');
-    if (list) list.innerHTML = t.wcList.map(i => `<li>${i}</li>`).join('');
-
-    // Render topic chips
-    const bar = document.getElementById('topicBar');
-    bar.innerHTML = t.topics.map(tp =>
+    document.getElementById('headerSub').textContent   = t.headerSub;
+    document.getElementById('langToggleBtn').textContent = t.toggleBtn;
+    document.getElementById('promptInput').placeholder = t.placeholder;
+    const wt = document.getElementById('wcTitle');
+    const wd = document.getElementById('wcDesc');
+    const wl = document.getElementById('wcList');
+    if (wt) wt.textContent = t.wcTitle;
+    if (wd) wd.textContent = t.wcDesc;
+    if (wl) wl.innerHTML   = t.wcList.map(i => `<li>${i}</li>`).join('');
+    // Topic chips
+    document.getElementById('topicBar').innerHTML = t.topics.map(tp =>
         `<button class="chip" onclick="quickTopic('${tp}')">${tp}</button>`
     ).join('');
 }
 
 function quickTopic(topic) {
     const clean = topic.replace(/^[\p{Emoji}\s]+/u, '').trim();
-    const t = UI[currentLang];
-    const q = currentLang === 'english'
+    document.getElementById('promptInput').value = currentLang === 'english'
         ? `Tell me about ${clean} farming in Malawi`
         : `Ndiphunzitseni za ulimi wa ${clean} ku Malawi`;
-    document.getElementById('promptInput').value = q;
     sendMessage();
 }
 
 // ── TRANSLATION ───────────────────────────────────────────────────────────────
 async function translate(text, source, target) {
-    const url = `${TRANS_API}?text=${encodeURIComponent(text)}&source=${source}&target=${target}`;
-    const res  = await fetch(url);
-    const data = await res.json();
-    return data.translation || data.translated_text || data.result || text;
+    try {
+        const url  = `${TRANS_API}?text=${encodeURIComponent(text)}&source=${source}&target=${target}`;
+        const res  = await fetch(url);
+        const data = await res.json();
+        return data.translation || data.translated_text || data.result || text;
+    } catch {
+        return text; // fallback: return original if translation fails
+    }
 }
 
 // ── WIKIPEDIA CONTEXT ─────────────────────────────────────────────────────────
 async function getWikiContext(query) {
     try {
-        const search = await fetch(`https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=${encodeURIComponent(query + ' Malawi agriculture')}&srlimit=1&format=json&origin=*`);
-        const sData  = await search.json();
-        const title  = sData?.query?.search?.[0]?.title;
+        const s = await fetch(`https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=${encodeURIComponent(query + ' Malawi agriculture')}&srlimit=1&format=json&origin=*`);
+        const sd = await s.json();
+        const title = sd?.query?.search?.[0]?.title;
         if (!title) return '';
-        const sumRes = await fetch(`https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(title)}`);
-        const sumData = await sumRes.json();
-        return sumData.extract ? sumData.extract.slice(0, 500) : '';
+        const r = await fetch(`https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(title)}`);
+        const rd = await r.json();
+        return rd.extract ? rd.extract.slice(0, 500) : '';
     } catch { return ''; }
 }
 
-// ── HELPERS ───────────────────────────────────────────────────────────────────
+// ── DOM HELPERS ───────────────────────────────────────────────────────────────
 function chatBox()      { return document.getElementById('chatBox'); }
 function scrollBottom() { const cb = chatBox(); cb.scrollTop = cb.scrollHeight; }
 
@@ -537,22 +413,28 @@ function autoResize(el) {
 }
 
 function updateCharCount(el) {
-    const n = el.value.length;
+    const n = Math.min(el.value.length, MAX_CHARS);
     document.getElementById('charCount').textContent = `${n} / ${MAX_CHARS}`;
-    if (n > MAX_CHARS) el.value = el.value.slice(0, MAX_CHARS);
+    if (el.value.length > MAX_CHARS) el.value = el.value.slice(0, MAX_CHARS);
 }
 
 function handleKey(e) {
     if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendMessage(); }
 }
 
+function escapeHTML(s) {
+    return s.replace(/&/g,'&amp;').replace(/</g,'&lt;')
+            .replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#039;');
+}
+
+// ── APPEND MESSAGES ───────────────────────────────────────────────────────────
 function appendUser(text) {
     removeWelcome();
     const t   = UI[currentLang];
     const div = document.createElement('div');
     div.className = 'message user-msg';
     div.innerHTML = `
-        <div style="font-size:0.67rem;color:var(--muted);margin-bottom:3px;text-align:right">${t.youLabel}</div>
+        <div class="msg-label right">${t.youLabel}</div>
         <div class="user-bubble">${escapeHTML(text)}</div>`;
     chatBox().appendChild(div);
     scrollBottom();
@@ -563,31 +445,47 @@ function appendThinkingEl() {
     const div = document.createElement('div');
     div.className = 'message ai-msg';
     div.innerHTML = `
-        <div style="font-size:0.67rem;color:var(--muted);margin-bottom:3px">${t.aiLabel}</div>
-        <div class="thinking-bubble" id="thinkWrap">
-            <div class="dot"></div><div class="dot"></div><div class="dot"></div>
-            <span style="font-size:0.78rem;color:var(--muted);margin-left:4px" id="thinkLabel">${t.thinking}</span>
+        <div class="msg-label">${t.aiLabel}</div>
+        <div class="thinking-bubble" id="thinkBubble">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <span class="think-label" id="thinkLabel">${t.thinking}</span>
         </div>`;
     chatBox().appendChild(div);
     scrollBottom();
     return div;
 }
 
-function showTranslatingBadge(el) {
-    const t    = UI[currentLang];
-    const wrap = el.querySelector('#thinkWrap');
-    if (wrap) wrap.innerHTML = `<span class="translating"><span class="spin">↻</span> ${t.translating}</span>`;
+function setTranslatingBadge(thinkEl) {
+    const t      = UI[currentLang];
+    const bubble = thinkEl.querySelector('#thinkBubble') || thinkEl.querySelector('.thinking-bubble') || thinkEl.querySelector('.translating-badge');
+    if (bubble) {
+        bubble.className = 'translating-badge';
+        bubble.removeAttribute('id');
+        bubble.innerHTML = `<span class="spin">↻</span> ${t.translating}`;
+    }
 }
 
-function finaliseReply(wrap, rawText, elapsedMs) {
+function resetThinkingDots(thinkEl) {
+    const t      = UI[currentLang];
+    const bubble = thinkEl.querySelector('.translating-badge') || thinkEl.querySelector('.thinking-bubble');
+    if (bubble) {
+        bubble.className = 'thinking-bubble';
+        bubble.id        = 'thinkBubble';
+        bubble.innerHTML = `
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <span class="think-label">${t.thinking}</span>`;
+    }
+}
+
+function finaliseReply(thinkEl, rawText, elapsedMs) {
     const t       = UI[currentLang];
     const seconds = (elapsedMs / 1000).toFixed(1);
 
-    const bubble = document.createElement('div');
-    bubble.className = 'ai-bubble';
-    bubble.textContent = rawText;
-
-    const copyBtn = document.createElement('button');
+    const copyBtn       = document.createElement('button');
     copyBtn.className   = 'copy-btn';
     copyBtn.textContent = t.copy;
     copyBtn.onclick     = () => {
@@ -598,14 +496,27 @@ function finaliseReply(wrap, rawText, elapsedMs) {
         });
     };
 
-    const meta = document.createElement('div');
-    meta.className = 'ai-meta';
-    meta.innerHTML = `<span class="ai-time">⏱ ${seconds}${t.timeLabel}</span>`;
+    const bubble       = document.createElement('div');
+    bubble.className   = 'ai-bubble';
+    bubble.textContent = rawText;
+
+    const meta       = document.createElement('div');
+    meta.className   = 'ai-meta';
+    meta.innerHTML   = `<span class="ai-time">⏱ ${seconds}s</span>`;
     meta.appendChild(copyBtn);
 
-    wrap.innerHTML = '';
-    wrap.appendChild(bubble);
-    wrap.appendChild(meta);
+    // Replace the thinking element's inner content
+    const label = thinkEl.querySelector('.msg-label');
+    thinkEl.innerHTML = '';
+    if (label) thinkEl.appendChild(label);
+    else {
+        const lbl       = document.createElement('div');
+        lbl.className   = 'msg-label';
+        lbl.textContent = t.aiLabel;
+        thinkEl.appendChild(lbl);
+    }
+    thinkEl.appendChild(bubble);
+    thinkEl.appendChild(meta);
     scrollBottom();
 }
 
@@ -615,153 +526,118 @@ function appendError(msg) {
     const div = document.createElement('div');
     div.className = 'message ai-msg';
     div.innerHTML = `
-        <div style="font-size:0.67rem;color:var(--muted);margin-bottom:3px">${t.aiLabel}</div>
+        <div class="msg-label">${t.aiLabel}</div>
         <div class="error-bubble">${escapeHTML(msg)}</div>`;
     chatBox().appendChild(div);
     scrollBottom();
 }
 
-function escapeHTML(s) {
-    return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
-            .replace(/"/g,'&quot;').replace(/'/g,'&#039;');
-}
-
-// ── MAIN SEND ─────────────────────────────────────────────────────────────────
+// ── SEND MESSAGE ──────────────────────────────────────────────────────────────
 async function sendMessage() {
     const input  = document.getElementById('promptInput');
     const btn    = document.getElementById('sendBtn');
     const prompt = input.value.trim();
     if (!prompt) return;
 
-    input.value      = '';
+    input.value        = '';
     input.style.height = 'auto';
-    btn.disabled     = true;
+    document.getElementById('charCount').textContent = `0 / ${MAX_CHARS}`;
+    btn.disabled = true;
 
     const startTime = Date.now();
     appendUser(prompt);
-    const thinkEl  = appendThinkingEl();
-    const thinkWrap = thinkEl.querySelector('.message') || thinkEl;
-    const bubbleWrap = thinkEl; // we'll replace inner content
+    const thinkEl = appendThinkingEl();
 
     try {
-        // ── STEP 1: If Chichewa, translate input → English ────────────────
+        // STEP 1: Translate Chichewa → English if needed
         let englishPrompt = prompt;
         if (currentLang === 'chichewa') {
-            showTranslatingBadge(thinkEl);
+            setTranslatingBadge(thinkEl);
             englishPrompt = await translate(prompt, 'chichewa', 'english');
+            resetThinkingDots(thinkEl);
         }
 
-        // ── STEP 2: Get Wikipedia agriculture context ─────────────────────
+        // STEP 2: Wikipedia agriculture context
         const wikiContext = await getWikiContext(englishPrompt);
 
-        // ── STEP 3: Build agriculture-only system prompt ──────────────────
+        // STEP 3: Build system prompt
         const systemPrompt = `You are Mlimi Connect AI, a free agricultural advisor for Malawian smallholder farmers.
 
 IDENTITY:
 - Your name is Mlimi Connect AI.
-- You are a free agricultural advisor created to help Malawian farmers.
 - You ONLY answer questions about farming, crops, livestock, pests, diseases, soil, and agriculture in Malawi.
-- If asked anything unrelated to agriculture or farming, say: "I can only help with farming and agricultural questions for Malawi."
+- If asked anything unrelated to agriculture, say: "I can only help with farming and agricultural questions for Malawi."
 
 MALAWI KNOWLEDGE:
-- You know Malawi's three main growing regions: Northern (Mzimba, Karonga), Central (Lilongwe, Kasungu, Dowa), Southern (Blantyre, Zomba, Shire Valley).
-- Malawi's rainy season is November to April. Dry season is May to October.
-- Main crops: Maize, Tobacco, Groundnuts, Rice, Cassava, Soya Beans, Cotton, Tea, Coffee, Sugarcane, Sunflower, Beans, Pigeon Peas, Sweet Potatoes, Irish Potatoes, Tomatoes, Onions, Cabbage, Bananas, Mangoes, Avocados, Macadamia, Paprika.
-- Main livestock: Indigenous chickens (village chickens), Broilers, Layers, Cattle (Zebu, Friesian, Jersey), Goats, Pigs, Sheep, Rabbits, Tilapia (fish farming), Beekeeping.
-- Common pests: Fall armyworm (njowala), Aphids, Stalk borers, Red spider mites, Whitefly, Rats.
-- Common diseases: Maize streak virus, Gray leaf spot, Northern leaf blight, Newcastle disease (nkhuku), Foot and mouth disease (ng'ombe), African swine fever (nkhumba).
+- Three growing regions: Northern (Mzimba, Karonga), Central (Lilongwe, Kasungu, Dowa), Southern (Blantyre, Zomba, Shire Valley).
+- Rainy season: November to April. Dry season: May to October.
+- Main crops: Maize, Tobacco, Groundnuts, Rice, Cassava, Soya Beans, Cotton, Sunflower, Beans, Pigeon Peas, Sweet Potatoes, Tomatoes, Onions, Bananas, Mangoes, Paprika.
+- Main livestock: Indigenous chickens, Broilers, Layers, Cattle (Zebu, Friesian, Jersey), Goats, Pigs, Sheep, Rabbits, Tilapia, Beekeeping.
+- Common pests: Fall armyworm (njowala), Aphids, Stalk borers, Red spider mites, Whitefly.
+- Common diseases: Maize streak virus, Gray leaf spot, Newcastle disease, Foot and mouth disease, African swine fever.
+- Maize varieties: SC403, SC627, DK8031, MH18. Groundnut varieties: Chalimbana, CG7. Rice varieties: Senga, Changu.
 ${wikiContext ? `\nADDITIONAL REFERENCE:\n${wikiContext}\n` : ''}
 RESPONSE RULES:
-1. ONLY answer agriculture and farming questions.
-2. Give practical, actionable advice specific to Malawi's conditions and climate.
-3. Keep answers clear, concise, and easy for farmers to understand.
-4. Mention specific Malawian varieties when relevant (e.g. Maize: SC403, SC627, DK8031; Groundnuts: Chalimbana, CG7).
-5. Present advice as general agricultural knowledge — do not cite specific institutions.
-6. Structure answers with clear steps or points when giving instructions.
-7. Always mention safety precautions when recommending chemicals or pesticides.`;
+1. ONLY answer agriculture and farming questions for Malawi.
+2. Give practical, actionable advice specific to Malawi's climate and conditions.
+3. Keep answers clear, numbered, and easy for farmers to understand.
+4. Mention specific Malawian varieties, fertilizer rates, and timing where relevant.
+5. Always mention safety precautions when recommending chemicals or pesticides.
+6. Structure answers with numbered steps when giving planting or treatment instructions.`;
 
-        // ── STEP 4: Update thinking indicator ────────────────────────────
-        const thinkWrapInner = thinkEl.querySelector('#thinkWrap');
-        if (thinkWrapInner) {
-            const tLabel = thinkWrapInner.querySelector('#thinkLabel');
-            if (tLabel) tLabel.textContent = UI[currentLang].thinking;
-            // Reset dots
-            thinkWrapInner.innerHTML = `
-                <div class="dot"></div><div class="dot"></div><div class="dot"></div>
-                <span style="font-size:0.78rem;color:var(--muted);margin-left:4px">${UI[currentLang].thinking}</span>`;
-        }
-
-        // ── STEP 5: Call AI API ───────────────────────────────────────────
+        // STEP 4: Call AI backend
         const response = await fetch(AI_API, {
-            method: 'POST',
+            method:  'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-                prompt: englishPrompt,
-                system: systemPrompt
-            })
+            body:    JSON.stringify({ prompt: englishPrompt, system: systemPrompt })
         });
 
-        let englishAnswer = '';
-        const contentType = response.headers.get('content-type') || '';
+        if (!response.ok) throw new Error(`Server error ${response.status}`);
 
-        if (contentType.includes('text/event-stream')) {
-            // SSE streaming
-            const reader  = response.body.getReader();
-            const decoder = new TextDecoder();
-            let buffer    = '';
+        const data = await response.json();
+        if (data.error) throw new Error(data.error);
 
-            // Switch to streaming bubble
-            if (thinkWrapInner) {
-                thinkWrapInner.className = 'ai-bubble typing-cursor';
-                thinkWrapInner.removeAttribute('id');
-                thinkWrapInner.innerHTML = '';
-            }
-            const textNode = document.createElement('span');
-            if (thinkWrapInner) thinkWrapInner.appendChild(textNode);
+        let englishAnswer = data.result || '';
+        if (!englishAnswer.trim()) throw new Error("Empty response from AI");
 
-            while (true) {
-                const { done, value } = await reader.read();
-                if (done) break;
-                buffer += decoder.decode(value, { stream: true });
-                const lines = buffer.split('\n');
-                buffer = lines.pop();
-                for (const line of lines) {
-                    if (!line.startsWith('data: ')) continue;
-                    try {
-                        const json = JSON.parse(line.slice(6));
-                        if (json.error) throw new Error(json.error);
-                        if (json.chunk) {
-                            englishAnswer += json.chunk;
-                            if (textNode) textNode.textContent = englishAnswer;
-                            scrollBottom();
-                        }
-                        if (json.done) {
-                            englishAnswer = json.result || englishAnswer;
-                            if (thinkWrapInner) thinkWrapInner.classList.remove('typing-cursor');
-                        }
-                    } catch (_) {}
-                }
-            }
-        } else {
-            // JSON fallback
-            const data    = await response.json();
-            englishAnswer = data.result || data.response || '';
-        }
-
-        // ── STEP 6: If Chichewa, translate answer → Chichewa ─────────────
+        // STEP 5: Translate English → Chichewa if needed
         let finalAnswer = englishAnswer;
-        if (currentLang === 'chichewa' && englishAnswer) {
-            showTranslatingBadge(thinkEl);
+        if (currentLang === 'chichewa') {
+            setTranslatingBadge(thinkEl);
             finalAnswer = await translate(englishAnswer, 'english', 'chichewa');
         }
 
-        // ── STEP 7: Render final answer ───────────────────────────────────
-        const innerWrap = thinkEl.querySelector('.thinking-bubble, .ai-bubble') || thinkEl;
-        finaliseReply(innerWrap.parentElement || thinkEl, finalAnswer, Date.now() - startTime);
+        // STEP 6: Animate typing then finalise
+        const thinkBubble = thinkEl.querySelector('.thinking-bubble') ||
+                            thinkEl.querySelector('.translating-badge');
+        if (thinkBubble) {
+            thinkBubble.className = 'ai-bubble typing-cursor';
+            thinkBubble.removeAttribute('id');
+            thinkBubble.innerHTML = '';
+        }
+
+        const textNode = document.createElement('span');
+        if (thinkBubble) thinkBubble.appendChild(textNode);
+
+        await new Promise(resolve => {
+            let i = 0;
+            function type() {
+                if (i < finalAnswer.length) {
+                    textNode.textContent += finalAnswer[i++];
+                    scrollBottom();
+                    setTimeout(type, 5);
+                } else {
+                    if (thinkBubble) thinkBubble.classList.remove('typing-cursor');
+                    finaliseReply(thinkEl, finalAnswer, Date.now() - startTime);
+                    resolve();
+                }
+            }
+            type();
+        });
 
     } catch (err) {
         thinkEl.remove();
-        appendError(UI[currentLang].errConn + ' (' + err.message + ')');
+        appendError(UI[currentLang].errConn + ' — ' + err.message);
     }
 
     btn.disabled = false;
